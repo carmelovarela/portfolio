@@ -45,10 +45,6 @@ main {
 
 .header {
     color: #000000;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0.2em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -56,6 +52,20 @@ main {
     align-content: space-between;
     justify-content: center;
     height: 100vh;
+}
+
+header h1 {
+    letter-spacing: 0.2em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 4em;
+}
+
+header a {
+    color: #a7a7a7;
+    letter-spacing: 0.2em;
+    font-size: 1rem;
 }
 
 header p {
