@@ -109,6 +109,8 @@ footer > h6 {
   color: #ffffff;
   background-color: var(--primary-color);
   margin: 1rem 0 3rem;
+  width: 7rem;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
