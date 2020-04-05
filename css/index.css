@@ -1,7 +1,5 @@
-@font-face {
-  src: url(assets/ABChanel PB SemiBold M.ttf);
-  font-family: "ABChanel";
-}
+@font-face { src: url("../assets/fonts/ABChanelSB.ttf") format("truetype"); font-family: ABChanelSB; }
+@font-face { src: url("../assets/fonts/ABChanelRG.ttf") format("truetype"); font-family: ABChanelRG; }
 
 :root {
   --primary-color: rgba(0,0,0,1.0);;
@@ -47,7 +45,7 @@ header {
 }
 
 .header {
-  font-family: "ABChanel";
+  font-family: "ABChanelSB";
   margin: 0 0 1rem;
 }
 
@@ -56,7 +54,7 @@ header {
   margin-right: 2rem;
   padding-bottom: 1.7rem;
   border-bottom: 4px solid #ffffff;
-  font-family: "ABChanel";
+  font-family: "ABChanelRG";
 }
 
 .nav-link:last-child {
@@ -93,12 +91,12 @@ footer {
 }
 
 footer > h6 {
-  font-family: "ABChanel";
+  font-family: "ABChanelRG";
 }
 
 .primary-btn {
   font-size: 0.75rem;
-  font-family: "ABChanel";
+  font-family: "ABChanelRG";
   padding: 0.75rem;
   border: 1px solid var(--secondary-color);
 }
@@ -106,7 +104,7 @@ footer > h6 {
 .link-btn {
   display: inline-block;
   font-size: 0.75rem;
-  font-family: "ABChanel";
+  font-family: "ABChanelRG";
   padding: 0.75rem;
   color: #ffffff;
   background-color: var(--primary-color);
