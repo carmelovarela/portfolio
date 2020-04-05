@@ -1,0 +1,128 @@
+@import url(//db.onlinewebfonts.com/c/5a2dd538f909ec5cf2f4129b228e6080?family=ABChanel+PB+SemiBold+M);
+@import url(//db.onlinewebfonts.com/c/a376e49c31629228f826115e97de91e1?family=ABChanelCouture-Light);
+
+:root {
+  --primary-color: rgba(0,0,0,1.0);;
+  --secondary-color: rgba(0,0,0,0.1);;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  margin: 0;
+  display: grid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+p {
+  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+}
+
+.light-text {
+  color: #a0a0a0;
+}
+
+/* Navigation */
+
+header {
+  display: grid;
+  justify-items: center;
+  padding: 2rem 0 1.75rem;
+  border-top: 8px solid var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header {
+  font-family: "ABChanel PB SemiBold M";
+  margin: 0 0 1rem;
+}
+
+.nav-link {
+  font-family: "ABChanelCouture-Light";
+  font-size: 0.7rem;
+  margin-right: 2rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 4px solid #ffffff;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid var(--primary-color);
+}
+
+/* Section */
+
+section {
+  margin: 3rem auto 0;
+  width: 40%;
+  text-align: justify;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+section > img {
+  width: 100%;
+  box-shadow: 0 0 30px var(--secondary-color);
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 8rem;
+  padding: 8rem 0;
+  text-align: center;
+  background-color: var(--primary-color);
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+}
+
+footer > h6 {
+  font-family: "ABChanelCouture-Light";
+}
+
+.primary-btn {
+  font-size: 0.75rem;
+  font-family: "ABChanelCouture-Light";
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-color);
+}
+
+.link-btn {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-family: "ABChanelCouture-Light";
+  padding: 0.75rem;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  margin: 1rem 0 3rem;
+}
+
+@media (max-width: 1200px) {
+  section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  section {
+    width: 90%;
+  }
+
+  header > h1 {
+    font-size: 1.5rem;
+  }
+}

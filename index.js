@@ -1,1 +1,0 @@
-const scroll = new SmoothScroll('.smooth-scroll-link')
