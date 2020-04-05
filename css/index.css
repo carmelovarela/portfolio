@@ -1,5 +1,4 @@
 @import url(//db.onlinewebfonts.com/c/5a2dd538f909ec5cf2f4129b228e6080?family=ABChanel+PB+SemiBold+M);
-@import url(//db.onlinewebfonts.com/c/a376e49c31629228f826115e97de91e1?family=ABChanelCouture-Light);
 
 :root {
   --primary-color: rgba(0,0,0,1.0);;
@@ -50,7 +49,6 @@ header {
 }
 
 .nav-link {
-  font-family: "ABChanelCouture-Light";
   font-size: 0.7rem;
   margin-right: 2rem;
   padding-bottom: 1.7rem;
