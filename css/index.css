@@ -118,6 +118,13 @@ footer > h6 {
   margin: 1rem 0 3rem;
   width: 7rem;
   text-align: center;
+  transition: background linear .1s;
+}
+
+.link-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  transition: background linear .1s;
 }
 
 @media (max-width: 1200px) {
