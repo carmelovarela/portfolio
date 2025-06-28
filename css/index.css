@@ -132,6 +132,7 @@ footer > h6 {
   width: 7rem;
   text-align: center;
   transition: background linear .1s;
+  border-radius: 0.5rem;
 }
 
 .link-btn:hover {
