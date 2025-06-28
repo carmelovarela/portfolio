@@ -2,8 +2,8 @@
 @font-face { src: url("../assets/fonts/ABChanelRG.ttf") format("truetype"); font-family: ABChanelRG; }
 
 :root {
-  --primary-color: rgba(0,0,0,1.0);;
-  --secondary-color: rgba(0,0,0,0.1);;
+  --primary-color: rgba(0,0,0,1.0);
+  --secondary-color: rgba(0,0,0,0.1);
 }
 
 body {
