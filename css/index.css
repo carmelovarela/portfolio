@@ -8,6 +8,7 @@ body {
   font-family: 'Geist', sans-serif;
   font-weight: 300;
   line-height: 1.65;
+  font-size: 1.1rem;
   margin: 0;
   display: grid;
 }
@@ -22,7 +23,7 @@ a {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1.125rem;
 }
 
 .light-text {
@@ -47,8 +48,20 @@ header {
   margin: 0 0 1rem;
 }
 
+header > h1 {
+  font-size: 2.75rem;
+}
+
+h5.header {
+  font-size: 1.5rem;
+}
+
+h6.header {
+  font-size: 1.25rem;
+}
+
 .nav-link {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-right: 2rem;
   padding-bottom: 1.75rem;
@@ -92,7 +105,7 @@ footer > h6 {
 }
 
 .primary-btn {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: 'Geist', sans-serif;
   padding: 0.75rem;
   border: 1px solid #ededed;
@@ -107,7 +120,7 @@ footer > h6 {
 
 .link-btn {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: 'Geist', sans-serif;
   padding: 0.75rem;
   color: #ffffff;
@@ -136,6 +149,6 @@ footer > h6 {
   }
 
   header > h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
