@@ -44,11 +44,13 @@ header {
 
 .header {
   font-family: 'Geist', sans-serif;
+  font-weight: 600;
   margin: 0 0 1rem;
 }
 
 .nav-link {
   font-size: 0.7rem;
+  font-weight: 600;
   margin-right: 2rem;
   padding-bottom: 1.75rem;
   border-bottom: 4px solid transparent;
