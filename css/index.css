@@ -158,7 +158,7 @@ footer > h6 {
 }
 
 .badge {
-  background: var(--secondary-color);
+  background: var(--btn-primary-color);
   border-radius: 0.5rem;
   padding: 0.25rem 0.7rem;
   font-size: 0.9rem;
