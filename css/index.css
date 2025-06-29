@@ -95,7 +95,12 @@ section > img {
   margin: 2rem 0;
 }
 
+.experience-item {
+  padding-bottom: 2rem;
+}
+
 .experience-item:not(:last-child) {
+  border-bottom: 1px solid var(--secondary-color);
   margin-bottom: 2rem;
 }
 
