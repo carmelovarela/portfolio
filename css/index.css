@@ -150,6 +150,22 @@ footer > h6 {
   transition: background linear .1s;
 }
 
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.badge {
+  background: var(--secondary-color);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
 @media (max-width: 1200px) {
   section {
     width: 70%;
