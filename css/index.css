@@ -95,6 +95,10 @@ section > img {
   margin: 2rem 0;
 }
 
+.experience-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 footer {
   margin-top: 8rem;
   padding: 8rem 0;
