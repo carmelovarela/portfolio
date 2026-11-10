@@ -213,6 +213,8 @@ a:hover {
   left: 8cqi;
   right: 8cqi;
   top: 10cqi;
+  /* Run to the tile's bottom edge so no sliver of background shows beneath the screen */
+  bottom: 0;
   padding: 0.8cqi 0.8cqi 0;
   border-radius: 1.8cqi 1.8cqi 0 0;
   background: #111111;
@@ -221,8 +223,7 @@ a:hover {
 .web img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/10;
+  height: 100%;
   object-fit: cover;
   object-position: left top;
   border-radius: 1cqi 1cqi 0 0;
