@@ -1,15 +1,11 @@
 import { ProjectSection } from "@/components/ProjectSection";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { projects } from "@/content/projects";
 
 export default function Home() {
   return (
     <>
       <header className="site-header">
-        <div className="theme-slot">
-          <ThemeToggle />
-        </div>
         <h1>Carmelo Varela</h1>
         <p className="intro">
           I build products with AI, and make the calls it can&apos;t.{" "}
