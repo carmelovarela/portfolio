@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import type { Project } from "@/content/projects";
 import { SlideTile } from "./SlideTile";
 
-const two = (x: number) => (x < 10 ? "0" : "") + x;
-
 const reduceMotion = () =>
   typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// The rail is full width with a side inset (scroll-padding) so the current slide sits centred.
+const inset = (el: HTMLElement) => parseFloat(getComputedStyle(el).scrollPaddingLeft) || 0;
 
 function Arrow({ dir }: { dir: "prev" | "next" }) {
   return (
@@ -30,7 +31,7 @@ export function Carousel({ project }: { project: Project }) {
     const child = el?.children[j] as HTMLElement | undefined;
     if (!el || !child) return;
     // The rail is position: relative, so offsetLeft is measured from the rail itself.
-    el.scrollTo({ left: child.offsetLeft, behavior: reduceMotion() ? "auto" : "smooth" });
+    el.scrollTo({ left: child.offsetLeft - inset(el), behavior: reduceMotion() ? "auto" : "smooth" });
     setI(j);
   };
 
@@ -40,17 +41,17 @@ export function Carousel({ project }: { project: Project }) {
     raf.current = requestAnimationFrame(() => {
       const el = rail.current;
       if (!el) return;
+      const pad = inset(el);
       let best = 0;
       let bd = Infinity;
       Array.from(el.children).forEach((c, n) => {
-        const d = Math.abs((c as HTMLElement).offsetLeft - el.scrollLeft);
+        const d = Math.abs((c as HTMLElement).offsetLeft - pad - el.scrollLeft);
         if (d < bd) {
           bd = d;
           best = n;
         }
       });
-      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 2 && bd > 8) best = el.children.length - 1;
-      setI(best);
+      setI(Math.min(best, slides.length - 1));
     });
   };
 
@@ -58,7 +59,7 @@ export function Carousel({ project }: { project: Project }) {
   const n = slides.length;
 
   return (
-    <div className="col deck">
+    <div className="deck">
       <div className="rail" ref={rail} tabIndex={0} role="region" aria-label={`${title} slides`} onScroll={onScroll}>
         {slides.map((s, j) => (
           <figure className={j === i ? "sl on" : "sl"} key={`${key}-${j}`} aria-label={`Slide ${j + 1} of ${n}: ${s.cap}`}>
@@ -66,36 +67,17 @@ export function Carousel({ project }: { project: Project }) {
           </figure>
         ))}
       </div>
-      <div className="ctl">
-        <div className="dots" role="group" aria-label="Choose a slide">
-          {slides.map((s, j) => (
-            <button
-              type="button"
-              key={j}
-              className={j === i ? "dot on" : "dot"}
-              aria-label={`Slide ${j + 1}: ${s.cap.replace(/\.$/, "")}`}
-              aria-current={j === i}
-              onClick={() => go(j)}
-            >
-              <span />
-            </button>
-          ))}
-        </div>
-        <div className="ctl-r">
-          <span className="cap" aria-live="polite">
-            <b>{cur.cap}</b> {cur.capText}
-          </span>
-          <span className="ctr">
-            {two(i + 1)} / {two(n)}
-          </span>
-          <div className="arws">
-            <button type="button" className="arw" aria-label="Previous slide" disabled={i === 0} onClick={() => go(Math.max(0, i - 1))}>
-              <Arrow dir="prev" />
-            </button>
-            <button type="button" className="arw" aria-label="Next slide" disabled={i === n - 1} onClick={() => go(Math.min(n - 1, i + 1))}>
-              <Arrow dir="next" />
-            </button>
-          </div>
+      <div className="inset ctl">
+        <p className="cap" aria-live="polite">
+          <b>{cur.cap}</b> {cur.capText}
+        </p>
+        <div className="arws">
+          <button type="button" className="arw" aria-label={`Previous ${title} slide`} disabled={i === 0} onClick={() => go(Math.max(0, i - 1))}>
+            <Arrow dir="prev" />
+          </button>
+          <button type="button" className="arw" aria-label={`Next ${title} slide`} disabled={i === n - 1} onClick={() => go(Math.min(n - 1, i + 1))}>
+            <Arrow dir="next" />
+          </button>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-// Project content for the home page decks, ported from the Home A3 design.
+// Project content for the home page decks, ported from the Home A3 refined design.
 
 export type Img = { src: string; alt: string; width: number; height: number };
 export type Item = { n?: string; big: string; label: string };
@@ -22,16 +22,8 @@ export const projects: Project[] = [
     "key": "mt",
     "slug": "mission-tracker",
     "title": "Mission Tracker",
-    "blurb": "An app for following SpaceX missions that teaches rocketry as you watch: live countdowns, a glossary from countdown to orbit, and hands-on ways to learn by flying a launch timeline or taking a Falcon 9 apart.",
+    "blurb": "Follow SpaceX missions, and learn rocketry as you watch.",
     "slides": [
-      {
-        "kind": "text",
-        "eyebrow": "The gap",
-        "title": "Launch apps win on data, not on feeling.",
-        "text": "The trackers cover every provider and do it well. None of them made me want to open them.",
-        "cap": "The gap.",
-        "capText": "Why build another launch app."
-      },
       {
         "kind": "phone",
         "imgs": [
@@ -63,35 +55,6 @@ export const projects: Project[] = [
         ],
         "cap": "Upcoming.",
         "capText": "A live countdown to the launch window, and the webcast one tap away."
-      },
-      {
-        "kind": "steps",
-        "eyebrow": "What it’s for",
-        "title": "Four goals, set before any design",
-        "items": [
-          {
-            "n": "01",
-            "big": "Track",
-            "label": "Never miss a launch."
-          },
-          {
-            "n": "02",
-            "big": "Learn",
-            "label": "Understand what’s happening, and why."
-          },
-          {
-            "n": "03",
-            "big": "Engage",
-            "label": "Build a relationship with launches."
-          },
-          {
-            "n": "04",
-            "big": "Dogfood",
-            "label": "Usable daily on my own iPhone."
-          }
-        ],
-        "cap": "The goals.",
-        "capText": "Set before any design work began."
       },
       {
         "kind": "phone",
@@ -145,14 +108,6 @@ export const projects: Project[] = [
         "capText": "Take a Falcon 9 apart, then put a flight’s events in order."
       },
       {
-        "kind": "text",
-        "eyebrow": "Decision 03",
-        "title": "Missions, not launches.",
-        "text": "A launch is an event; a mission carries on into orbit, docking and landing. The cost: a less familiar word to learn.",
-        "cap": "A decision.",
-        "capText": "Naming the thing the app follows."
-      },
-      {
         "kind": "stats",
         "eyebrow": "In numbers",
         "items": [
@@ -178,16 +133,8 @@ export const projects: Project[] = [
     "key": "rb",
     "slug": "robot-parts",
     "title": "Robot parts and 4am shifts",
-    "blurb": "A parts inventory and a plan to cut early shifts for a London robotics start-up. Researched, designed and written in a week for a job application.",
+    "blurb": "A parts inventory and a plan to cut 4am shifts for a London robotics start-up.",
     "slides": [
-      {
-        "kind": "text",
-        "eyebrow": "The frame",
-        "title": "One 4am stop connects both questions.",
-        "text": "Where the parts are, and how often someone has to be in a store at 4am, are two sides of the same moment.",
-        "cap": "The frame.",
-        "capText": "Two questions from the job advert, treated as one."
-      },
       {
         "kind": "web",
         "cap": "What’s on each robot.",
@@ -209,36 +156,6 @@ export const projects: Project[] = [
           "width": 2160,
           "height": 1350
         }
-      },
-      {
-        "kind": "steps",
-        "eyebrow": "Decisions",
-        "title": "Six calls, each with a cost",
-        "small": true,
-        "items": [
-          {
-            "n": "01",
-            "big": "A spreadsheet before software",
-            "label": "Cost: a month of scanning discipline."
-          },
-          {
-            "n": "02",
-            "big": "Serials only where they matter",
-            "label": "Cost: the split is a first guess."
-          },
-          {
-            "n": "03",
-            "big": "The robot is a location",
-            "label": "Cost: more modelling up front."
-          },
-          {
-            "n": "04",
-            "big": "Earn fewer 4am shifts",
-            "label": "Cost: slower than dropping shifts."
-          }
-        ],
-        "cap": "The decisions.",
-        "capText": "The costs are the part worth talking through."
       },
       {
         "kind": "web",
@@ -298,7 +215,7 @@ export const projects: Project[] = [
     "key": "cy",
     "slug": "carry",
     "title": "Carry and distribution engine",
-    "blurb": "How I'd take carry and payouts out of a spreadsheet at Odin, a London SPV platform. A paper, a tested calculation and a clickable demo, made for a job application.",
+    "blurb": "Taking carry and payouts out of a spreadsheet at Odin, a London SPV platform.",
     "slides": [
       {
         "kind": "sheet",
@@ -311,35 +228,6 @@ export const projects: Project[] = [
           "width": 794,
           "height": 1122
         }
-      },
-      {
-        "kind": "steps",
-        "eyebrow": "Carry, worked by hand",
-        "title": "Four friends, one exit",
-        "items": [
-          {
-            "n": "1 · In",
-            "big": "£10,000",
-            "label": "Four friends’ stake is sold."
-          },
-          {
-            "n": "2 · Back first",
-            "big": "£4,000",
-            "label": "Each gets their £1,000 back."
-          },
-          {
-            "n": "3 · Carry",
-            "big": "£1,200",
-            "label": "20% of the £6,000 profit, to Lena."
-          },
-          {
-            "n": "4 · The rest",
-            "big": "£4,800",
-            "label": "Split four ways, £1,200 each."
-          }
-        ],
-        "cap": "Learning it first.",
-        "capText": "One small exit, worked by hand to get the order right."
       },
       {
         "kind": "web",
@@ -409,6 +297,17 @@ export const projects: Project[] = [
         }
       },
       {
+        "kind": "web",
+        "cap": "Exited Investment Letter.",
+        "capText": "What an investor sees: his number first, then how it was reached.",
+        "img": {
+          "src": "/work/522b2b8f1dc5991947f97714e462c7ec.png",
+          "alt": "Exited Investment Letter for an investor",
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
         "kind": "stats",
         "eyebrow": "Proof",
         "items": [
@@ -427,17 +326,6 @@ export const projects: Project[] = [
         ],
         "cap": "Tested first.",
         "capText": "The careless reader is the useful result."
-      },
-      {
-        "kind": "web",
-        "cap": "Exited Investment Letter.",
-        "capText": "What an investor sees: his number first, then how it was reached.",
-        "img": {
-          "src": "/work/522b2b8f1dc5991947f97714e462c7ec.png",
-          "alt": "Exited Investment Letter for an investor",
-          "width": 1440,
-          "height": 900
-        }
       }
     ]
   }
