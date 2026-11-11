@@ -313,15 +313,15 @@ a:hover {
   border-radius: 1cqi 1cqi 0 0;
   background: #ffffff;
 }
-/* The paper as a tilted wall of pages, running off the tile edges */
+/* The paper as a wall of pages, running off the tile edges */
 .wall {
   position: absolute;
   left: 50%;
   top: 50%;
   display: grid;
-  grid-template-columns: repeat(5, 25cqi);
-  gap: 3.4cqi;
-  transform: translate(-50%, -50%) rotate(-16deg);
+  grid-template-columns: repeat(5, 31cqi);
+  gap: 3cqi;
+  transform: translate(-50%, -50%);
 }
 .wall img {
   display: block;

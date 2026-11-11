@@ -6,19 +6,24 @@ const SIZES = {
   web: "(max-width: 760px) 130vw, 960px",
   a4: "(max-width: 760px) 74vw, 460px",
   wide: "(max-width: 760px) 130vw, 980px",
-  wall: "(max-width: 760px) 25vw, 280px",
+  wall: "(max-width: 760px) 31vw, 350px",
 };
 
-// Wall H from the design doc: a 5 x 5 grid turned -16deg, cover in the middle cell.
+// The paper as a straight 5 x 5 wall of pages with the cover in the middle cell.
+// From the cover on, pages follow the paper's order (left to right, row by row); the cells
+// before it count back from the last page, so the whole wall reads as one loop.
 // The grid is bigger than the tile so it fills it at both desktop and phone shapes.
 const WALL_CELLS = 25;
 const WALL_MIDDLE = 12;
 
 function wallCells(imgs: Img[]) {
   const [cover, ...rest] = imgs;
-  return Array.from({ length: WALL_CELLS }, (_, i) =>
-    i === WALL_MIDDLE ? cover : rest[(i < WALL_MIDDLE ? i : i - 1) % rest.length],
-  );
+  const n = rest.length;
+  return Array.from({ length: WALL_CELLS }, (_, i) => {
+    if (i === WALL_MIDDLE) return cover;
+    const k = i > WALL_MIDDLE ? i - WALL_MIDDLE - 1 : n - (WALL_MIDDLE - i);
+    return rest[((k % n) + n) % n];
+  });
 }
 
 function tileClass(k: ProjectKey, s: Slide) {
