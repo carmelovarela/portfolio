@@ -24,7 +24,7 @@
 /* Dark mode (Charcoal): follows the device unless the switcher has picked a mode */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #191919;
+    --bg: #111111;
     --ink: #ececec;
     --btn2: #2e2e2e;
     --hover: #383838;
@@ -36,7 +36,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #191919;
+  --bg: #111111;
   --ink: #ececec;
   --btn2: #2e2e2e;
   --hover: #383838;
