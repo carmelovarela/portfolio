@@ -10,7 +10,7 @@
   --accent-h: #073f88;
   --frame: #f4f4f4;
   /* Project tiles keep the same colours in light and dark mode */
-  --t-mt: #232323;
+  --t-mt: #000000;
   --t-rb: #eeeef0;
   --t-cy: #013d27;
   --cell: rgba(20, 20, 20, 0.055);
