@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { ProjectKey, Slide } from "@/content/projects";
 
 const SIZES = {
-  phone: "(max-width: 760px) 40vw, 300px",
+  phone: "(max-width: 760px) 44vw, 340px",
   web: "(max-width: 760px) 130vw, 960px",
   a4: "(max-width: 760px) 74vw, 460px",
   wide: "(max-width: 760px) 130vw, 980px",

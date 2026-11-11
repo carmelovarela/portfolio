@@ -28,16 +28,16 @@ export const projects: Project[] = [
         "kind": "phone",
         "imgs": [
           {
-            "src": "/work/41ac60791fd353b2ba9710b6158acd40.png",
+            "src": "/work/mt-missions.png",
             "alt": "Missions screen with live countdowns",
-            "width": 1170,
-            "height": 2532
+            "width": 1368,
+            "height": 2724
           },
           {
-            "src": "/work/fab4a6483f8c7e835b869a0d59a21215.png",
+            "src": "/work/mt-dragon-detail.png",
             "alt": "Mission detail for a cargo Dragon in orbit",
-            "width": 1170,
-            "height": 2532
+            "width": 1368,
+            "height": 2724
           }
         ],
         "cap": "Track.",
@@ -47,10 +47,10 @@ export const projects: Project[] = [
         "kind": "phone",
         "imgs": [
           {
-            "src": "/work/11d29ede3d9cbdc48c2686c78d8d716d.png",
-            "alt": "Upcoming Starlink mission with a live countdown",
-            "width": 1170,
-            "height": 2532
+            "src": "/work/mt-upcoming.png",
+            "alt": "Upcoming Starship flight with a live countdown",
+            "width": 1368,
+            "height": 2724
           }
         ],
         "cap": "Upcoming.",
@@ -60,16 +60,16 @@ export const projects: Project[] = [
         "kind": "phone",
         "imgs": [
           {
-            "src": "/work/482ad1cf34628e3bf8db6969174a9ad5.png",
+            "src": "/work/mt-learn.png",
             "alt": "Learn tab",
-            "width": 1170,
-            "height": 2532
+            "width": 1368,
+            "height": 2724
           },
           {
-            "src": "/work/45c65dbaee70b65b4d1308ee5873eda4.png",
-            "alt": "Falcon 9 term page",
-            "width": 1170,
-            "height": 2532
+            "src": "/work/mt-term.png",
+            "alt": "Go/no-go poll term page",
+            "width": 1368,
+            "height": 2724
           }
         ],
         "cap": "Learn.",
@@ -79,10 +79,10 @@ export const projects: Project[] = [
         "kind": "phone",
         "imgs": [
           {
-            "src": "/work/54a159d07f458ad6c4e5ee9264747edd.png",
-            "alt": "Fly the timeline interactive",
-            "width": 1170,
-            "height": 2532
+            "src": "/work/mt-timeline.png",
+            "alt": "Fly the timeline interactive at liftoff",
+            "width": 1368,
+            "height": 2724
           }
         ],
         "cap": "Fly the timeline.",
@@ -92,16 +92,16 @@ export const projects: Project[] = [
         "kind": "phone",
         "imgs": [
           {
-            "src": "/work/32139d46f6d01ed4991dbf91fe357d5f.png",
+            "src": "/work/mt-apart.png",
             "alt": "Exploded Falcon 9 with numbered parts",
-            "width": 1170,
-            "height": 2532
+            "width": 1368,
+            "height": 2724
           },
           {
-            "src": "/work/bc2440576adb1c64a3e9a936a3e0573b.png",
-            "alt": "Put the events of a flight phase in order",
-            "width": 1170,
-            "height": 2532
+            "src": "/work/mt-order.png",
+            "alt": "Put the events of the ascent in launch order",
+            "width": 1368,
+            "height": 2724
           }
         ],
         "cap": "Learn by doing.",

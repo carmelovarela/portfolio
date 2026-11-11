@@ -282,21 +282,16 @@ a:hover {
   justify-content: center;
   gap: 5cqi;
 }
+/* Phone shots arrive already inside the Simulator's device frame (scripts/frame-iphone.swift) */
 .phone {
   flex: none;
-  width: 26cqi;
-  aspect-ratio: 390/844;
-  border-radius: 4.4cqi;
-  padding: 0.8cqi;
-  background: #050505;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 3cqi 6cqi -3cqi rgba(0, 0, 0, 0.6);
+  width: 29cqi;
+  filter: drop-shadow(0 3cqi 4cqi rgba(0, 0, 0, 0.45));
 }
 .phone img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 3.6cqi;
+  height: auto;
 }
 .web {
   position: absolute;
@@ -582,7 +577,7 @@ a:hover {
     aspect-ratio: 4/5;
   }
   .tile.k-phone .phone {
-    width: 40cqi;
+    width: 44cqi;
   }
   .tile.k-phone .ph-row {
     top: 12cqi;
