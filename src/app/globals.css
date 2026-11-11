@@ -267,7 +267,7 @@ a:hover {
   --cell: rgba(20, 20, 20, 0.055);
 }
 .tile.t-cy {
-  background: var(--t-cy);
+  background: var(--t-cy) url(/work/cy-bg.jpg) center / cover no-repeat;
   color: #f2f6f3;
   --tm: #a8c4b5;
   --cell: rgba(255, 255, 255, 0.08);
@@ -328,7 +328,6 @@ a:hover {
   width: 100%;
   height: auto;
   background: #ffffff;
-  box-shadow: 0 1.4cqi 3cqi -1.2cqi rgba(0, 0, 0, 0.5);
 }
 .sheet {
   position: absolute;
@@ -366,6 +365,10 @@ a:hover {
 .eb {
   font-size: 1.5cqi;
   color: var(--tm);
+}
+/* Carry's gradient is pale at the top, so its labels there go dark */
+.tile.t-cy .eb {
+  color: #2a5a85;
 }
 .st {
   margin: 0;
