@@ -268,8 +268,8 @@ a:hover {
 }
 .tile.t-cy {
   background: var(--t-cy) url(/work/cy-bg.jpg) center / cover no-repeat;
-  color: #f2f6f3;
-  --tm: #a8c4b5;
+  color: #f4f7fa;
+  --tm: #b3c7da;
   --cell: rgba(255, 255, 255, 0.08);
 }
 
