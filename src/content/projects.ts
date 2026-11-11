@@ -225,109 +225,109 @@ export const projects: Project[] = [
         "capText": "Carry at Odin, from the spice merchants to my first 90 days.",
         "imgs": [
           {
-            "src": "/work/cy-paper-01.jpg",
+            "src": "/work/cy-page-01.jpg",
             "alt": "Cover of the paper, Counting the spice",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-03.jpg",
+            "src": "/work/cy-page-03.jpg",
             "alt": "A deal older than any fund",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-04.jpg",
+            "src": "/work/cy-page-04.jpg",
             "alt": "Lena and four friends",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-05.jpg",
+            "src": "/work/cy-page-05.jpg",
             "alt": "A relay with thirteen hand-offs",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-06.jpg",
+            "src": "/work/cy-page-06.jpg",
             "alt": "Real deals are never this tidy",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-07.jpg",
+            "src": "/work/cy-page-07.jpg",
             "alt": "Read, calculate, approve",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-08.jpg",
+            "src": "/work/cy-page-08.jpg",
             "alt": "Prove it before it touches money",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-09.jpg",
+            "src": "/work/cy-page-09.jpg",
             "alt": "The first 90 days",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-15.jpg",
+            "src": "/work/cy-page-15.jpg",
             "alt": "Today, end to end",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-16.jpg",
+            "src": "/work/cy-page-16.jpg",
             "alt": "Where Odin’s own pages disagree",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-18.jpg",
+            "src": "/work/cy-page-18.jpg",
             "alt": "Who needs what, at each step of an exit",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-19.jpg",
+            "src": "/work/cy-page-19.jpg",
             "alt": "AI reads, code calculates, people approve",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-22.jpg",
+            "src": "/work/cy-page-22.jpg",
             "alt": "Today screen",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-24.jpg",
+            "src": "/work/cy-page-24.jpg",
             "alt": "Exit detail screen",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-25.jpg",
+            "src": "/work/cy-page-25.jpg",
             "alt": "Cash in screen",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-26.jpg",
+            "src": "/work/cy-page-26.jpg",
             "alt": "Settle the terms screen",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-27.jpg",
+            "src": "/work/cy-page-27.jpg",
             "alt": "Exit calculation screen",
             "width": 774,
             "height": 1094
           },
           {
-            "src": "/work/cy-paper-29.jpg",
+            "src": "/work/cy-page-29.jpg",
             "alt": "Syndicate lead approval screen",
             "width": 774,
             "height": 1094
