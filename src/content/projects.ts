@@ -16,7 +16,7 @@ export type Slide = Base &
     | { kind: "steps"; eyebrow: string; title: string; small?: boolean; items: Item[] }
   );
 
-export type ProjectKey = "mt" | "rb" | "cy";
+export type ProjectKey = "mt" | "rb" | "cy" | "hz";
 export type Project = { key: ProjectKey; slug: string; title: string; blurb: string; slides: Slide[] };
 
 export const projects: Project[] = [
@@ -431,6 +431,130 @@ export const projects: Project[] = [
         ],
         "cap": "Tested first.",
         "capText": "The careless reader is the useful result."
+      }
+    ]
+  },
+  {
+    "key": "hz",
+    "slug": "horizon",
+    "title": "Horizon",
+    "blurb": "Turning what clients say on calls into work engineering can pick up, at Neudata.",
+    "slides": [
+      {
+        "kind": "web",
+        "cap": "The workflow.",
+        "capText": "A meeting link in, the call fetched from Granola, Claude reads it, and draft tickets come out.",
+        "img": {
+          "src": "/work/hz-workflow.jpg",
+          "alt": "Extract product feedback workflow: URL input, fetch meeting, analyse transcript, output",
+          "width": 2880,
+          "height": 1800
+        }
+      },
+      {
+        "kind": "web",
+        "cap": "Drafts with evidence.",
+        "capText": "Every ticket quotes the person who raised it, then the problem, proposal and criteria.",
+        "img": {
+          "src": "/work/hz-drafts.jpg",
+          "alt": "One meeting's draft tickets with one ticket open",
+          "width": 2880,
+          "height": 1864
+        }
+      },
+      {
+        "kind": "web",
+        "cap": "Every call, logged.",
+        "capText": "One row per meeting, so the same call is never extracted twice.",
+        "img": {
+          "src": "/work/hz-extractions.jpg",
+          "alt": "Extractions list, one row per meeting",
+          "width": 2880,
+          "height": 1800
+        }
+      },
+      {
+        "kind": "web",
+        "cap": "Send to GitLab.",
+        "capText": "A person picks the good drafts and a milestone, then pushes them in one go.",
+        "img": {
+          "src": "/work/hz-push.jpg",
+          "alt": "Push to GitLab dialog with a milestone picker",
+          "width": 2880,
+          "height": 1800
+        }
+      },
+      {
+        "kind": "web",
+        "cap": "Plans down to milestones.",
+        "capText": "Quarters hold initiatives, initiatives hold projects, projects link to milestones.",
+        "img": {
+          "src": "/work/hz-plan.jpg",
+          "alt": "Quarterly plan with initiatives, projects and milestones",
+          "width": 2880,
+          "height": 1850
+        }
+      },
+      {
+        "kind": "web",
+        "cap": "Feedback beside delivery.",
+        "capText": "What clients asked for, next to GitLab velocity, cycle time and burndown.",
+        "img": {
+          "src": "/work/hz-home.jpg",
+          "alt": "Home dashboard with feedback and engineering metrics",
+          "width": 2880,
+          "height": 4220
+        }
+      },
+      {
+        "kind": "steps",
+        "eyebrow": "How it works",
+        "title": "Two of the eight steps use AI.",
+        "small": true,
+        "items": [
+          {
+            "n": "Person",
+            "big": "Paste a meeting link",
+            "label": "Any Granola link, or a bare ID"
+          },
+          {
+            "n": "AI",
+            "big": "Read the call, draft tickets",
+            "label": "Fixed template, verbatim quotes"
+          },
+          {
+            "n": "Person",
+            "big": "Review and choose",
+            "label": "Read, delete, pick a milestone"
+          },
+          {
+            "n": "Code",
+            "big": "Push to GitLab",
+            "label": "Fixed issue format, links written back"
+          }
+        ],
+        "cap": "How it works.",
+        "capText": "AI reads and drafts, code does the rest, and a person decides what reaches engineering."
+      },
+      {
+        "kind": "stats",
+        "eyebrow": "In use",
+        "items": [
+          {
+            "big": "~1 min",
+            "label": "to draft a meeting’s tickets, down from 1–2 hours by hand"
+          },
+          {
+            "big": "~155",
+            "label": "draft tickets from 17 real meetings, Feb–Apr 2026"
+          },
+          {
+            "big": "5 weeks",
+            "label": "to build, with Claude Code"
+          }
+        ],
+        "cap": "In use.",
+        "capText": "Run on real client calls, with a person on the send button."
       }
     ]
   }

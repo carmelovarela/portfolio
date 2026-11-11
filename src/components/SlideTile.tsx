@@ -97,7 +97,7 @@ export function SlideTile({ project, slide: s }: { project: ProjectKey; slide: S
               <p className="st sm">{s.title}</p>
               <div className={s.small ? "steps sm" : "steps"}>
                 {s.items.map((t) => (
-                  <div key={t.n}>
+                  <div key={`${t.n} ${t.big}`}>
                     <small>{t.n}</small>
                     <b>{t.big}</b>
                     <span>{t.label}</span>

@@ -272,6 +272,23 @@ a:hover {
   --tm: #b3c7da;
   --cell: rgba(255, 255, 255, 0.08);
 }
+.tile.t-hz {
+  /* A soft orange glow from the bottom-left, fading into warm grey and ivory */
+  background:
+    radial-gradient(
+      110% 95% at 0% 100%,
+      #e8702f 0%,
+      #ef9a62 18%,
+      rgba(242, 190, 152, 0.75) 34%,
+      rgba(240, 226, 212, 0.35) 52%,
+      rgba(240, 238, 233, 0) 70%
+    ),
+    linear-gradient(160deg, #f6f5f1 0%, #efede8 55%, #e8e5df 100%);
+  /* Light tile: keep dark text in both modes */
+  color: #141414;
+  --tm: #5c5247;
+  --cell: rgba(60, 40, 20, 0.07);
+}
 
 .ph-row {
   position: absolute;
@@ -374,6 +391,14 @@ a:hover {
 /* Carry's gradient is pale at the top, so its labels there go dark */
 .tile.t-cy .eb {
   color: #2a5a85;
+}
+/* Horizon's numbers mix words and symbols (~1 min, 5 weeks), so they get looser tracking */
+.tile.t-hz .stats b {
+  letter-spacing: -0.015em;
+  word-spacing: 0.04em;
+  white-space: nowrap;
+  /* A touch smaller than the other decks so "5 weeks" fits its column */
+  font-size: 6.6cqi;
 }
 .st {
   margin: 0;
@@ -641,6 +666,9 @@ a:hover {
     gap: 4cqi;
   }
   .tile .stats b {
+    font-size: 10cqi;
+  }
+  .tile.t-hz .stats b {
     font-size: 10cqi;
   }
   .tile .stats span {
