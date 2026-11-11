@@ -9,15 +9,42 @@
   --accent: #0b56b8;
   --accent-h: #073f88;
   --frame: #f4f4f4;
-  --t-mt: #252528;
+  /* Project tiles keep the same colours in light and dark mode */
+  --t-mt: #232323;
   --t-rb: #eeeef0;
-  --t-cy: #3d3935;
+  --t-cy: #013d27;
   --cell: rgba(20, 20, 20, 0.055);
   /* Text sits in a 720px column; slides are 1116px wide and centred in a full-width rail */
   --text: 720px;
   --slide: min(1116px, calc(100vw - 40px));
   --side: max(20px, calc((100vw - 1116px) / 2));
   color-scheme: light;
+}
+
+/* Dark mode (Charcoal): follows the device unless the switcher has picked a mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191919;
+    --ink: #ececec;
+    --btn2: #2e2e2e;
+    --hover: #383838;
+    --muted: #a3a3a3;
+    --accent: #7ab4ff;
+    --accent-h: #a9cdff;
+    --frame: #242424;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191919;
+  --ink: #ececec;
+  --btn2: #2e2e2e;
+  --hover: #383838;
+  --muted: #a3a3a3;
+  --accent: #7ab4ff;
+  --accent-h: #a9cdff;
+  --frame: #242424;
+  color-scheme: dark;
 }
 
 * {
@@ -66,6 +93,65 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
+}
+
+/* Mode switcher: sun/moon button at the top right of the text column */
+.theme-slot {
+  position: absolute;
+  top: 106px;
+  right: 20px;
+}
+.tg {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tg:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.tg:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.tgi {
+  display: block;
+  overflow: visible;
+}
+.tgi .tgc,
+.tgi .tgmo,
+.tgi .tgr {
+  transform-box: view-box;
+  transform-origin: 12px 12px;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+.tgi.moon .tgc {
+  transform: scale(0.3);
+  opacity: 0;
+}
+.tgi.moon .tgr {
+  transform: rotate(-60deg) scale(0.4);
+  opacity: 0;
+}
+.tgi.sun .tgmo {
+  transform: rotate(45deg) scale(0.5);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tgi .tgc,
+  .tgi .tgmo,
+  .tgi .tgr {
+    transition: none;
+  }
 }
 .site-header .name {
   margin: 0;
@@ -170,16 +256,20 @@ a:hover {
 .tile.t-mt {
   background: var(--t-mt);
   color: #f2f2f2;
-  --tm: #aeaeb2;
+  --tm: #b0b0b0;
   --cell: rgba(255, 255, 255, 0.07);
 }
 .tile.t-rb {
   background: var(--t-rb);
+  /* Light tile: keep dark text in both modes */
+  color: #141414;
+  --tm: #555555;
+  --cell: rgba(20, 20, 20, 0.055);
 }
 .tile.t-cy {
   background: var(--t-cy);
-  color: #f4f1ec;
-  --tm: #c9c2b8;
+  color: #f2f6f3;
+  --tm: #a8c4b5;
   --cell: rgba(255, 255, 255, 0.08);
 }
 
@@ -562,6 +652,10 @@ a:hover {
 
   .site-header {
     padding: 56px 28px 0;
+  }
+  .theme-slot {
+    top: 42px;
+    right: 16px;
   }
   .site-header .hero {
     font-size: 32px;
