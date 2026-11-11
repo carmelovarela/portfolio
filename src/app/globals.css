@@ -319,7 +319,7 @@ a:hover {
   left: 50%;
   top: 50%;
   display: grid;
-  grid-template-columns: repeat(5, 31cqi);
+  grid-template-columns: repeat(5, 24cqi);
   gap: 3cqi;
   transform: translate(-50%, -50%);
 }

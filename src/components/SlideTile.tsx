@@ -6,22 +6,23 @@ const SIZES = {
   web: "(max-width: 760px) 130vw, 960px",
   a4: "(max-width: 760px) 74vw, 460px",
   wide: "(max-width: 760px) 130vw, 980px",
-  wall: "(max-width: 760px) 31vw, 350px",
+  wall: "(max-width: 760px) 24vw, 280px",
 };
 
-// The paper as a straight 5 x 5 wall of pages with the cover in the middle cell.
-// From the cover on, pages follow the paper's order (left to right, row by row); the cells
-// before it count back from the last page, so the whole wall reads as one loop.
+// The paper as a straight 5 x 5 wall of pages. The cover sits in the middle row, in the
+// first column that shows in full (the outer columns are only slivers at the tile edges),
+// and the pages after it follow the paper's order, left to right and row by row. The
+// cells before it count back from the last page, so the whole wall reads as one loop.
 // The grid is bigger than the tile so it fills it at both desktop and phone shapes.
 const WALL_CELLS = 25;
-const WALL_MIDDLE = 12;
+const WALL_COVER = 11;
 
 function wallCells(imgs: Img[]) {
   const [cover, ...rest] = imgs;
   const n = rest.length;
   return Array.from({ length: WALL_CELLS }, (_, i) => {
-    if (i === WALL_MIDDLE) return cover;
-    const k = i > WALL_MIDDLE ? i - WALL_MIDDLE - 1 : n - (WALL_MIDDLE - i);
+    if (i === WALL_COVER) return cover;
+    const k = i > WALL_COVER ? i - WALL_COVER - 1 : n - (WALL_COVER - i);
     return rest[((k % n) + n) % n];
   });
 }
@@ -61,7 +62,7 @@ export function SlideTile({ project, slide: s }: { project: ProjectKey; slide: S
               <Image
                 key={i}
                 src={m.src}
-                alt={i === WALL_MIDDLE ? m.alt : ""}
+                alt={i === WALL_COVER ? m.alt : ""}
                 width={m.width}
                 height={m.height}
                 sizes={SIZES.wall}
