@@ -217,12 +217,12 @@ export const projects: Project[] = [
     "key": "cy",
     "slug": "carry",
     "title": "Carry and distribution engine",
-    "blurb": "Taking carry and payouts out of a spreadsheet at Odin, a London SPV platform.",
+    "blurb": "Taking carry and payouts out of a spreadsheet at a London SPV platform.",
     "slides": [
       {
         "kind": "wall",
         "cap": "The paper.",
-        "capText": "Carry at Odin, from the spice merchants to my first 90 days.",
+        "capText": "Carry, from the spice merchants to my first 90 days.",
         "imgs": [
           {
             "src": "/work/cy-page-01.jpg",
@@ -280,7 +280,7 @@ export const projects: Project[] = [
           },
           {
             "src": "/work/cy-page-16.jpg",
-            "alt": "Where Odin’s own pages disagree",
+            "alt": "Where the platform’s own pages disagree",
             "width": 774,
             "height": 1094
           },
@@ -348,10 +348,10 @@ export const projects: Project[] = [
       {
         "kind": "web",
         "cap": "Log an exit.",
-        "capText": "Odin reads the amount and dates, each with the page it came from.",
+        "capText": "The platform reads the amount and dates, each with the page it came from.",
         "img": {
           "src": "/work/be964eb2d3f50dafa08ab518cdd94378.png",
-          "alt": "Log an exit: Odin reads the sale documents",
+          "alt": "Log an exit: the platform reads the sale documents",
           "width": 1440,
           "height": 900
         }
@@ -359,7 +359,7 @@ export const projects: Project[] = [
       {
         "kind": "web",
         "cap": "Settle the terms.",
-        "capText": "Profit is defined twice. Odin won’t pick; a person does.",
+        "capText": "Profit is defined twice. The platform won’t pick; a person does.",
         "img": {
           "src": "/work/24e04272072845447c3ab2cab14011d1.png",
           "alt": "Settle the terms: two clauses define profit differently",
