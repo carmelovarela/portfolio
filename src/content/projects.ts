@@ -217,7 +217,7 @@ export const projects: Project[] = [
     "key": "cy",
     "slug": "carry",
     "title": "Carry and distribution engine",
-    "blurb": "Taking carry and payouts out of a spreadsheet at a London SPV platform.",
+    "blurb": "Taking carry and payouts out of a spreadsheet, for the deal teams paying out syndicate investors.",
     "slides": [
       {
         "kind": "wall",
