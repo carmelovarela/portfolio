@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Project } from "@/content/projects";
+import { track } from "@/lib/track";
 import { SlideTile } from "./SlideTile";
 
 const reduceMotion = () =>
@@ -19,12 +20,22 @@ function Arrow({ dir }: { dir: "prev" | "next" }) {
 }
 
 export function Carousel({ project }: { project: Project }) {
-  const { slides, key, title } = project;
+  const { slides, key, slug, title } = project;
   const [i, setI] = useState(0);
   const rail = useRef<HTMLDivElement>(null);
   const raf = useRef(0);
 
   useEffect(() => () => cancelAnimationFrame(raf.current), []);
+
+  // Record each slide the first time it's reached, and the end of the deck. Slide 1 is skipped
+  // because every visitor starts on it; section_time covers whether they saw the project at all.
+  const seen = useRef(new Set<number>());
+  useEffect(() => {
+    if (i === 0 || seen.current.has(i)) return;
+    seen.current.add(i);
+    track("slide_reached", { project: slug, slide: i + 1, of: slides.length });
+    if (i === slides.length - 1) track("carousel_end", { project: slug });
+  }, [i, slug, slides.length]);
 
   const go = (j: number) => {
     const el = rail.current;
